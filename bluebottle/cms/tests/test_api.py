@@ -43,7 +43,7 @@ class ResultPageTestCase(BluebottleTestCase):
     def setUp(self):
         super(ResultPageTestCase, self).setUp()
         self.init_projects()
-        image = File(open('./bluebottle/projects/test_images/upload.png', 'rb'))
+        image = File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb'))
         self.page = ResultPageFactory(title='Results last year', image=image)
         self.placeholder = Placeholder.objects.create_for_object(self.page, slot='content')
         self.url = reverse('result-page-detail', kwargs={'pk': self.page.id})
@@ -268,7 +268,7 @@ class ResultPageTestCase(BluebottleTestCase):
 
 class HomePageTestCase(BluebottleTestCase):
     """
-    Integration tests for the Results Page API.
+    Integration tests for the Home Page API.
     """
 
     def setUp(self):
@@ -295,9 +295,9 @@ class HomePageTestCase(BluebottleTestCase):
         self.assertEqual(response.data['blocks'][0]['type'], 'activities')
         self.assertEqual(len(response.data['blocks'][0]['activities']), 4)
 
-    def test_slides(self):
+    def test_slides_png(self):
         SlidesContent.objects.create_for_placeholder(self.placeholder)
-        image = File(open('./bluebottle/cms/tests/test_images/upload.png', 'rb'))
+        image = File(open('./bluebottle/cms/tests/test_images/mini.png', 'rb'))
 
         for i in range(0, 4):
             SlideFactory(
@@ -495,17 +495,17 @@ class PageTestCase(BluebottleTestCase):
         text = TextItem.objects.create_for_placeholder(self.placeholder, text='<p>Test content</p>')
         document = DocumentItem.objects.create_for_placeholder(
             self.placeholder,
-            document=File(open('./bluebottle/projects/test_images/upload.png', 'rb'),),
+            document=File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb')),
             text='Some file upload'
         )
         picture = PictureItem.objects.create_for_placeholder(
             self.placeholder,
-            image=File(open('./bluebottle/projects/test_images/upload.png', 'rb')),
+            image=File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb')),
             align='center'
         )
         image_text = ImageTextItem.objects.create_for_placeholder(
             self.placeholder,
-            image=File(open('./bluebottle/projects/test_images/upload.png', 'rb')),
+            image=File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb')),
             text='some text',
             align='center'
         )
@@ -603,7 +603,7 @@ class SitePlatformSettingsTestCase(BluebottleTestCase):
         self.assertEqual(response.data['platform']['content']['metadata_description'], None)
 
     def test_site_platform_settings_favicons(self):
-        favicon = File(open('./bluebottle/projects/test_images/upload.png', 'rb'))
+        favicon = File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb'))
         SitePlatformSettings.objects.create(favicon=favicon)
 
         response = self.client.get(reverse('settings'))
@@ -620,7 +620,7 @@ class SitePlatformSettingsTestCase(BluebottleTestCase):
         )
 
     def test_site_platform_settings_logo(self):
-        favicon = File(open('./bluebottle/projects/test_images/upload.png', 'rb'))
+        favicon = File(open('./bluebottle/cms/tests/test_images/mini.gif', 'rb'))
         SitePlatformSettings.objects.create(favicon=favicon)
 
         response = self.client.get(reverse('settings'))
