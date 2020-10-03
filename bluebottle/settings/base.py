@@ -478,8 +478,8 @@ LOGGING = {
             'class': 'logging.NullHandler',
         },
         'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true'],
+            'level': 'INFO',
+            #'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
@@ -488,22 +488,12 @@ LOGGING = {
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
         },
-        'sentry': {
-            'level': 'INFO',
-            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-        },
         'json': {
             'level': 'INFO',
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': os.path.join(PROJECT_ROOT, 'logs', 'api-json.log'),
             'formatter': 'json',
             'when': 'midnight',
-        },
-        'syslog': {
-            'level': 'INFO',
-            'class': 'logging.handlers.SysLogHandler',
-            'formatter': 'verbose',
-            'facility': 'local0',
         },
         'default': {
             'level': 'INFO',
@@ -512,18 +502,23 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
+        'axes': {
+            'handlers': ['console'],
             'propagate': True,
-            'level': 'ERROR',
+            'level': 'DEBUG',
         },
-        'bluebottle': {
-            'handlers': ['console', 'syslog'],
+        'django': {
+            'handlers': ['console'],
             'propagate': True,
             'level': 'INFO',
         },
+        'bluebottle': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
         'payments.payment': {
-            'handlers': ['mail_admins', 'payment_logs', 'sentry'],
+            'handlers': ['mail_admins'],
             'propagate': False,
             'level': 'INFO',
         },
