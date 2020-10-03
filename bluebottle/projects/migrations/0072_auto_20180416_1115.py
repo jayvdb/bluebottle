@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
         ('projects', '0071_merge_20180412_1133'),
     ]
 
-    operations = [
+    operations = []
+    o = [
         migrations.AddField(
             model_name='projectplatformsettings',
             name='facebook_at_work_url',

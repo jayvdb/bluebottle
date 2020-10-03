@@ -55,6 +55,6 @@ class Migration(migrations.Migration):
         ('payouts', '0009_payoutdocument')
     ]
     operations = [
-        migrations.RunPython(migrate_payout_details,
-                             remove_payout_accounts),
+        #migrations.RunPython(migrate_payout_details,
+        #                     remove_payout_accounts),
     ]

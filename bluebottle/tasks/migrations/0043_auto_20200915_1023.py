@@ -18,10 +18,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='task',
-            name='project',
-        ),
-        migrations.RemoveField(
-            model_name='task',
             name='skill',
         ),
         migrations.RemoveField(

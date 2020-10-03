@@ -15,10 +15,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='projectplatformsettings',
-            name='contact_types',
-            field=multiselectfield.MultiSelectField(choices=[(b'organization', 'Organization'), (b'personal', 'Personal')], default=['organization'], max_length=100),
-            preserve_default=False,
-        ),
+        #migrations.AddField(
+        #    model_name='projectplatformsettings',
+        #    name='contact_types',
+        #    field=multiselectfield.MultiSelectField(choices=[(b'organization', 'Organization'), (b'personal', 'Personal')], default=['organization'], max_length=100),
+        #    preserve_default=False,
+        #),
     ]

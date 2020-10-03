@@ -44,7 +44,7 @@ class Migration(migrations.Migration):
             name='Projects',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('projects', models.ManyToManyField(to='projects.Project')),
+                #('projects', models.ManyToManyField(to='projects.Project')),
             ],
         ),
         migrations.CreateModel(

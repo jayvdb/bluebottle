@@ -14,13 +14,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterModelOptions(
-            name='projectplatformsettings',
-            options={'verbose_name': 'project platform settings', 'verbose_name_plural': 'project platform settings'},
-        ),
-        migrations.AddField(
-            model_name='projectplatformsettings',
-            name='allow_anonymous_rewards',
-            field=models.BooleanField(default=True),
-        ),
+        #migrations.AlterModelOptions(
+        #    name='projectplatformsettings',
+        #    options={'verbose_name': 'project platform settings', 'verbose_name_plural': 'project platform settings'},
+        #),
+        #migrations.AddField(
+        #    model_name='projectplatformsettings',
+        #    name='allow_anonymous_rewards',
+        #    field=models.BooleanField(default=True),
+        #),
     ]

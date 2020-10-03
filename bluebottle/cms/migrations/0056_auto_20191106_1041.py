@@ -12,6 +12,7 @@ def migrate_project_blocks(apps, schema_editor):
     ContentType = apps.get_model('contenttypes', 'ContentType')
 
     activity_content_ctype = ContentType.objects.get_for_model(ActivitiesContent)
+    return
 
     for projects_content in ProjectsContent.objects.all():
         activities_content = ActivitiesContent.objects.create(

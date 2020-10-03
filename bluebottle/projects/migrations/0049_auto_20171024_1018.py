@@ -50,5 +50,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(migrate_project_settings, dummy)
+        #migrations.RunPython(migrate_project_settings, dummy)
     ]

@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-       migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='facebook_at_work_url',
-            field=models.URLField(blank=True, max_length=100, null=True),
-        ),
+        #migrations.AlterField(
+        #     model_name='projectplatformsettings',
+        #     name='facebook_at_work_url',
+        #     field=models.URLField(blank=True, max_length=100, null=True),
+        # ),
     ]

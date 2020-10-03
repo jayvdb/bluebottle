@@ -15,21 +15,21 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='ProjectPlatformSettings',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('update', models.DateTimeField(auto_now=True)),
-                ('project_create_types', multiselectfield.MultiSelectField(choices=[(b'sourcing', 'Sourcing'), (b'funding', 'Funding')], max_length=100)),
-                ('project_create_flow', models.CharField(choices=[(b'combined', 'Combined'), (b'choice', 'Choice')], max_length=100)),
-                ('project_suggestions', models.BooleanField(default=True)),
-                ('project_contact_method', models.CharField(choices=[(b'mail', 'E-mail'), (b'phone', 'Choose')], max_length=100)),
-            ],
-            options={
-                'verbose_name': 'Project Settings',
-                'verbose_name_plural': 'Project Settings',
-            },
-        ),
+        #migrations.CreateModel(
+        #    name='ProjectPlatformSettings',
+        #    fields=[
+        #        ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #        ('update', models.DateTimeField(auto_now=True)),
+        #        ('project_create_types', multiselectfield.MultiSelectField(choices=[(b'sourcing', 'Sourcing'), (b'funding', 'Funding')], max_length=100)),
+        #        ('project_create_flow', models.CharField(choices=[(b'combined', 'Combined'), (b'choice', 'Choice')], max_length=100)),
+        #        ('project_suggestions', models.BooleanField(default=True)),
+        #        ('project_contact_method', models.CharField(choices=[(b'mail', 'E-mail'), (b'phone', 'Choose')], max_length=100)),
+        #    ],
+        #    options={
+        #        'verbose_name': 'Project Settings',
+        #        'verbose_name_plural': 'Project Settings',
+        #    },
+        #),
         migrations.CreateModel(
             name='ProjectSearchFilter',
             fields=[
@@ -39,9 +39,9 @@ class Migration(migrations.Migration):
                 ('values', models.CharField(blank=True, help_text='Comma separated list of possible values', max_length=500, null=True)),
             ],
         ),
-        migrations.AddField(
-            model_name='projectplatformsettings',
-            name='search_filters',
-            field=models.ManyToManyField(to='projects.ProjectSearchFilter'),
-        ),
+        #migrations.AddField(
+        #    model_name='projectplatformsettings',
+        #    name='search_filters',
+        #    field=models.ManyToManyField(to='projects.ProjectSearchFilter'),
+        #),
     ]

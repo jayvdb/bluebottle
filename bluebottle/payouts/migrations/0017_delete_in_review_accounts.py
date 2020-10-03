@@ -26,5 +26,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(remove_accounts)
+        #migrations.RunPython(remove_accounts)
     ]

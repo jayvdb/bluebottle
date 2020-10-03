@@ -13,9 +13,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='projectscontent',
-            name='new_projects',
-            field=models.ManyToManyField(db_table='cms_projectscontent_projects', to='projects.Project'),
-        ),
+        #migrations.AddField(
+        #    model_name='projectscontent',
+        #    name='new_projects',
+        #    field=models.ManyToManyField(db_table='cms_projectscontent_projects', to='projects.Project'),
+        #),
     ]

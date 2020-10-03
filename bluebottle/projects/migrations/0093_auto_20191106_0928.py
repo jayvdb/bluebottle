@@ -38,5 +38,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(migrate_settings, migrations.RunPython.noop)
+        #migrations.RunPython(migrate_settings, migrations.RunPython.noop)
     ]

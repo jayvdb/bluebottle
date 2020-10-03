@@ -12,10 +12,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='projects',
-            name='projects',
-        ),
+        # migrations.RemoveField(
+        #    model_name='projects',
+        #    name='projects',
+        #),
         migrations.RemoveField(
             model_name='projectscontent',
             name='projects',
@@ -23,10 +23,10 @@ class Migration(migrations.Migration):
         migrations.DeleteModel(
             name='Projects',
         ),
-        migrations.RenameField(
-            model_name='projectscontent',
-            old_name='new_projects',
-            new_name='projects',
-        ),
+        #migrations.RenameField(
+        #    model_name='projectscontent',
+        #    old_name='new_projects',
+        #    new_name='projects',
+        #),
 
     ]

@@ -18,7 +18,7 @@ def migrate_stats(apps, schema_editor):
             new_stat.block = block
             new_stat.pk = None
             new_stat.save()
-            new_stat.translations = translations
+            #new_stat.translations = translations
             new_stat.save()
         Stat.objects.filter(pk=pk).all().delete()
 

@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=100)),
                 ('description', models.CharField(blank=True, max_length=200, null=True)),
                 ('sequence', models.PositiveIntegerField(db_index=True, default=0, editable=False)),
-                ('project_settings', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='extra_fields', to='projects.ProjectPlatformSettings')),
+                #('project_settings', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='extra_fields', to='projects.ProjectPlatformSettings')),
             ],
             options={
                 'ordering': ['sequence'],
@@ -43,9 +43,9 @@ class Migration(migrations.Migration):
             name='field',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='projects.CustomProjectFieldSettings'),
         ),
-        migrations.AddField(
-            model_name='customprojectfield',
-            name='project',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='projects.Project', verbose_name=b'extra'),
-        ),
+        #migrations.AddField(
+        #    model_name='customprojectfield',
+        #    name='project',
+        #    field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='projects.Project', verbose_name=b'extra'),
+        #),
     ]

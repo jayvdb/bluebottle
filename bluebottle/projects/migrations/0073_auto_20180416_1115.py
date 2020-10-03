@@ -8,7 +8,7 @@ from bluebottle.clients import properties
 
 
 def migrate_share_options(apps, schema_editor):
-    ProjectPlatformSettings = apps.get_model('projects', 'ProjectPlatformSettings')
+    #ProjectPlatformSettings = apps.get_model('projects', 'ProjectPlatformSettings')
     Client = apps.get_model('clients', 'Client')
 
     project_settings, _ = ProjectPlatformSettings.objects.get_or_create()
@@ -20,8 +20,8 @@ def migrate_share_options(apps, schema_editor):
         key for key, value in list(properties.SHARE_OPTIONS.items()) if value
     ]
 
-    if 'facebookAtWork' in project_settings.share_options:
-        project_settings.facebook_at_work_url = 'https://booking.facebook.com'
+    #if 'facebookAtWork' in project_settings.share_options:
+    project_settings.facebook_at_work_url = 'https://booking.facebook.com'
 
     project_settings.save()
 
@@ -34,5 +34,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(migrate_share_options)
+        #migrations.RunPython(migrate_share_options)
     ]

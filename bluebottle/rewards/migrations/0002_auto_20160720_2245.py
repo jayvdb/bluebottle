@@ -18,11 +18,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='reward',
             name='amount_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AlterField(
             model_name='reward',
             name='amount',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0.0'), default_currency=b'EUR', max_digits=12, verbose_name='Amount'),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0.0'), default_currency='EUR', max_digits=12, verbose_name='Amount'),
         ),
     ]

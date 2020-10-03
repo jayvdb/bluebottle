@@ -456,5 +456,5 @@ class Migration(migrations.Migration):
             name='funding_id',
             field=models.IntegerField(null=True),
         ),
-        migrations.RunPython(migrate_projects, wipe_initiatives)
+        #migrations.RunPython(migrate_projects, wipe_initiatives)
     ]

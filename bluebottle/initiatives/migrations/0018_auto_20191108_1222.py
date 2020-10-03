@@ -29,5 +29,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(fix_missing_geopositions, migrations.RunPython.noop)
+        #migrations.RunPython(fix_missing_geopositions, migrations.RunPython.noop)
     ]

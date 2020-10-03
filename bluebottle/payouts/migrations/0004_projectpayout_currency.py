@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='projectpayout',
             name='currency',
-            field=models.CharField(choices=[(b'EUR', b'Euro')], default=b'EUR', max_length=10),
+            field=models.CharField(choices=[('EUR', 'Euro')], default='EUR', max_length=10),
         ),
     ]

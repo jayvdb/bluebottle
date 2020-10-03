@@ -29,9 +29,9 @@ class Migration(migrations.Migration):
             name='default_amount_asked',
             field=bluebottle.utils.fields.MoneyField(blank=True, currency_choices="[('EUR', u'Euro')]", decimal_places=2, default=None, max_digits=12, null=True),
         ),
-        migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='allow_anonymous_rewards',
-            field=models.BooleanField(default=True, verbose_name='Allow guests to donate rewards'),
-        ),
+        #migrations.AlterField(
+        #    model_name='projectplatformsettings',
+        #    name='allow_anonymous_rewards',
+        #    field=models.BooleanField(default=True, verbose_name='Allow guests to donate rewards'),
+        #),
     ]

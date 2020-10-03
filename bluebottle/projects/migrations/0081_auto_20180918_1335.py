@@ -15,9 +15,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='projectplatformsettings',
-            name='match_options',
-            field=MultiSelectField(blank=True, choices=[(b'theme', 'Theme'), (b'skill', 'Skill'), (b'location', 'Location')], max_length=100),
-        ),
+        #migrations.AddField(
+        #    model_name='projectplatformsettings',
+        #    name='match_options',
+        #    field=MultiSelectField(blank=True, choices=[(b'theme', 'Theme'), (b'skill', 'Skill'), (b'location', 'Location')], max_length=100),
+        #),
     ]

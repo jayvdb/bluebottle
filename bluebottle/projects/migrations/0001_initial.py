@@ -90,7 +90,7 @@ class Migration(migrations.Migration):
                 ('location', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='geo.Location')),
                 ('organization', models.ForeignKey(blank=True, help_text='Project organization', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='organization', to='organizations.Organization', verbose_name='organization')),
                 ('owner', models.ForeignKey(help_text='Campaigner', on_delete=django.db.models.deletion.CASCADE, related_name='owner', to=settings.AUTH_USER_MODEL, verbose_name='campaigner')),
-                ('status', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bb_projects.ProjectPhase')),
+                #('status', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bb_projects.ProjectPhase')),
                 ('tags', taggit.managers.TaggableManager(blank=True, help_text='Add tags', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='tags')),
                 ('theme', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='bb_projects.ProjectTheme')),
             ],
@@ -141,7 +141,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('start', django_extensions.db.fields.CreationDateTimeField(auto_now_add=True, help_text='When this project entered in this status.', verbose_name='created')),
                 ('project', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='projects.Project')),
-                ('status', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bb_projects.ProjectPhase')),
+                #('status', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bb_projects.ProjectPhase')),
             ],
             options={
                 'abstract': False,

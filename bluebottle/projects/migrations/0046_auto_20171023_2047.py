@@ -13,7 +13,8 @@ class Migration(migrations.Migration):
         ('projects', '0045_auto_20171023_2013'),
     ]
 
-    operations = [
+    operations = []
+    foo = [
         migrations.RenameField(
             model_name='projectplatformsettings',
             old_name='project_contact_method',

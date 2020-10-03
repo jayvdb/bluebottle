@@ -43,7 +43,7 @@ def create_default_result_pages(apps, schema_editor):
     Stats = apps.get_model('cms', 'Stats')
     Stat = apps.get_model('cms', 'Stat')
     ProjectsContent = apps.get_model('cms', 'ProjectsContent')
-    Project = apps.get_model('projects', 'Project')
+    #Project = apps.get_model('projects', 'Project')
     Projects = apps.get_model('cms', 'Projects')
     ProjectImagesContent = apps.get_model('cms', 'ProjectImagesContent')
     ShareResultsContent = apps.get_model('cms', 'ShareResultsContent')
@@ -87,11 +87,11 @@ def create_default_result_pages(apps, schema_editor):
         *page.end_date.timetuple()[:6], tzinfo=timezone(settings.TIME_ZONE)
     )
 
-    for project in Project.objects.filter(
-        status__slug='done-complete',
-        campaign_ended__range=(start_time, end_time)
-    )[:3]:
-        projects.projects.add(project)
+    #for project in Project.objects.filter(
+    #    status__slug='done-complete',
+    #    campaign_ended__range=(start_time, end_time)
+    #)[:3]:
+    #    projects.projects.add(project)
 
     # All the content
     all_content = {

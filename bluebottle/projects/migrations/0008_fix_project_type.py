@@ -36,5 +36,5 @@ class Migration(migrations.Migration):
     """
 
     operations = [
-        migrations.RunSQL(query)
+        #migrations.RunSQL(query)
     ]

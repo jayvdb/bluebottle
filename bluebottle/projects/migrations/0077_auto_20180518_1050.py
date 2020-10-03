@@ -23,5 +23,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(set_reviewed)
+        #migrations.RunPython(set_reviewed)
     ]

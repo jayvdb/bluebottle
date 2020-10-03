@@ -116,7 +116,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='wallpost',
             name='donation',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='donation', to='donations.Donation', verbose_name='Donation'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='donation', to='funding.Donation', verbose_name='Donation'),
         ),
         migrations.AddField(
             model_name='wallpost',

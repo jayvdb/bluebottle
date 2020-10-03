@@ -8,19 +8,19 @@ from django.core.management import call_command
 
 def generate_looker_embeds(apps, schema_editor):
 
-    ProjectPlatformSettings = apps.get_model('projects', 'ProjectPlatformSettings')
-    project_settings, created = ProjectPlatformSettings.objects.get_or_create()
+    #ProjectPlatformSettings = apps.get_model('projects', 'ProjectPlatformSettings')
+    #project_settings, created = ProjectPlatformSettings.objects.get_or_create()
 
     LookerEmbed = apps.get_model('looker', 'LookerEmbed')
     LookerEmbed.objects.all().delete()
 
     call_command('loaddata', 'looker_projects')
 
-    if 'sourcing' in project_settings.create_types:
-        call_command('loaddata', 'looker_activities')
+    #if 'sourcing' in project_settings.create_types:
+    call_command('loaddata', 'looker_activities')
 
-    if 'funding' in project_settings.create_types:
-        call_command('loaddata', 'looker_giving')
+    #if 'funding' in project_settings.create_types:
+    call_command('loaddata', 'looker_giving')
 
 
 def dummy(apps, schema_editor):

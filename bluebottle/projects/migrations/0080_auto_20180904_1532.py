@@ -20,19 +20,19 @@ class Migration(migrations.Migration):
             name='currencies',
             field=multiselectfield.db.fields.MultiSelectField(choices=[(b'EUR', 'Euro')], default=[], max_length=100),
         ),
-        migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='contact_types',
-            field=multiselectfield.db.fields.MultiSelectField(choices=[(b'organization', 'Organization'), (b'personal', 'Personal')], max_length=100),
-        ),
-        migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='create_types',
-            field=multiselectfield.db.fields.MultiSelectField(choices=[(b'sourcing', 'Sourcing'), (b'funding', 'Funding')], max_length=100),
-        ),
-        migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='share_options',
-            field=multiselectfield.db.fields.MultiSelectField(blank=True, choices=[(b'twitter', 'Twitter'), (b'facebook', 'Facebook'), (b'facebookAtWork', 'Facebook at Work'), (b'linkedin', 'LinkedIn'), (b'whatsapp', 'Whatsapp'), (b'email', 'Email')], max_length=100),
-        ),
+        #migrations.AlterField(
+        #    model_name='projectplatformsettings',
+        #    name='contact_types',
+        #    field=multiselectfield.db.fields.MultiSelectField(choices=[(b'organization', 'Organization'), (b'personal', 'Personal')], max_length=100),
+        #),
+        #migrations.AlterField(
+        #    model_name='projectplatformsettings',
+        #    name='create_types',
+        #    field=multiselectfield.db.fields.MultiSelectField(choices=[(b'sourcing', 'Sourcing'), (b'funding', 'Funding')], max_length=100),
+        #),
+        #migrations.AlterField(
+        #    model_name='projectplatformsettings',
+        #    name='share_options',
+        #    field=multiselectfield.db.fields.MultiSelectField(blank=True, choices=[(b'twitter', 'Twitter'), (b'facebook', 'Facebook'), (b'facebookAtWork', 'Facebook at Work'), (b'linkedin', 'LinkedIn'), (b'whatsapp', 'Whatsapp'), (b'email', 'Email')], max_length=100),
+        #),
     ]

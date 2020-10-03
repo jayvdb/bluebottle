@@ -24,47 +24,47 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='project',
             name='amount_asked_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AddField(
             model_name='project',
             name='amount_donated_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AddField(
             model_name='project',
             name='amount_extra_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AddField(
             model_name='project',
             name='amount_needed_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AddField(
             model_name='projectbudgetline',
             name='amount_currency',
-            field=djmoney.models.fields.CurrencyField(choices=[(b'EUR', b'Euro')], default=b'EUR', editable=False, max_length=3),
+            field=djmoney.models.fields.CurrencyField(choices=[('EUR', 'Euro')], default='EUR', editable=False, max_length=4),
         ),
         migrations.AlterField(
             model_name='project',
             name='amount_asked',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0'), default_currency=b'EUR', max_digits=12, null=True),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0'), default_currency='EUR', max_digits=12, null=True),
         ),
         migrations.AlterField(
             model_name='project',
             name='amount_donated',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0'), default_currency=b'EUR', max_digits=12, null=True),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0'), default_currency='EUR', max_digits=12, null=True),
         ),
         migrations.AlterField(
             model_name='project',
             name='amount_extra',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0'), default_currency=b'EUR', help_text='Amount pledged by organisation (matching fund).', max_digits=12, null=True),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0'), default_currency='EUR', help_text='Amount pledged by organisation (matching fund).', max_digits=12, null=True),
         ),
         migrations.AlterField(
             model_name='project',
             name='amount_needed',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0'), default_currency=b'EUR', max_digits=12, null=True),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0'), default_currency='EUR', max_digits=12, null=True),
         ),
         migrations.AlterField(
             model_name='project',
@@ -74,6 +74,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='projectbudgetline',
             name='amount',
-            field=bluebottle.utils.fields.MoneyField(currency_choices=[(b'EUR', b'Euro')], decimal_places=2, default=Decimal('0.0'), default_currency=b'EUR', max_digits=12),
+            field=bluebottle.utils.fields.MoneyField(currency_choices=[('EUR', 'Euro')], decimal_places=2, default=Decimal('0.0'), default_currency='EUR', max_digits=12),
         ),
     ]

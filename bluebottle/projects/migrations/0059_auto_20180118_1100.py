@@ -25,12 +25,12 @@ class Migration(migrations.Migration):
                 ('amount_currency', djmoney.models.fields.CurrencyField(choices=[(b'EUR', 'Euro')], default='EUR', editable=False, max_length=3)),
                 ('amount', bluebottle.utils.fields.MoneyField(currency_choices="[('EUR', u'Euro')]", decimal_places=2, default=Decimal('0.0'), max_digits=12)),
                 ('organization', models.ForeignKey(help_text='Default partner organization', null=True, on_delete=django.db.models.deletion.CASCADE, to='organizations.Organization')),
-                ('project_settings', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='templates', to='projects.ProjectPlatformSettings')),
+                #('project_settings', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='templates', to='projects.ProjectPlatformSettings')),
             ],
         ),
-        migrations.AlterField(
-            model_name='customprojectfield',
-            name='project',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='extra', to='projects.Project'),
-        ),
+        #migrations.AlterField(
+        #    model_name='customprojectfield',
+        #    name='project',
+        #    field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='extra', to='projects.Project'),
+        #),
     ]

@@ -5,7 +5,10 @@ from __future__ import unicode_literals
 import bluebottle.utils.fields
 from django.db import migrations, models
 import django.utils.timezone
-import django_summernote.settings
+try:
+    from django_summernote.settings import uploaded_filepath
+except ImportError:
+    from django_summernote.utils import uploaded_filepath
 
 
 class Migration(migrations.Migration):
@@ -22,7 +25,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='projectimage',
             name='file',
-            field=models.FileField(default=None, upload_to=django_summernote.settings.uploaded_filepath),
+            field=models.FileField(default=None, upload_to=uploaded_filepath),
             preserve_default=False,
         ),
         migrations.AddField(

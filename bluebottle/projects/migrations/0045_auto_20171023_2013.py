@@ -22,9 +22,9 @@ class Migration(migrations.Migration):
             name='sequence',
             field=models.PositiveIntegerField(db_index=True, default=0, editable=False),
         ),
-        migrations.AlterField(
-            model_name='projectplatformsettings',
-            name='project_contact_method',
-            field=models.CharField(choices=[(b'mail', 'E-mail'), (b'phone', 'Phone')], max_length=100),
-        ),
+        #migrations.AlterField(
+        #    model_name='projectplatformsettings',
+        #    name='project_contact_method',
+        #    field=models.CharField(choices=[(b'mail', 'E-mail'), (b'phone', 'Phone')], max_length=100),
+        #),
     ]

@@ -237,5 +237,5 @@ class Migration(migrations.Migration):
             name='activity_id',
             field=models.IntegerField(null=True),
         ),
-        migrations.RunPython(migrate_tasks, migrations.RunPython.noop)
+        #migrations.RunPython(migrate_tasks, migrations.RunPython.noop)
     ]

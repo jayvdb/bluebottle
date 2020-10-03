@@ -49,7 +49,6 @@ class Migration(migrations.Migration):
                 ('created', django_extensions.db.fields.CreationDateTimeField(auto_now_add=True, help_text='When this task was created?', verbose_name='created')),
                 ('updated', django_extensions.db.fields.ModificationDateTimeField(auto_now=True, verbose_name='updated')),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tasks_task_related', to=settings.AUTH_USER_MODEL)),
-                ('project', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='projects.Project')),
                 ('skill', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='tasks.Skill', verbose_name='Skill needed')),
                 ('tags', taggit.managers.TaggableManager(blank=True, help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='tags')),
             ],

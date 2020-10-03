@@ -14,13 +14,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='projectplatformsettings',
-            name='search_filters',
-        ),
-        migrations.AddField(
-            model_name='projectsearchfilter',
-            name='project_settings',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='projects.ProjectPlatformSettings'),
-        ),
+        #migrations.RemoveField(
+        #    model_name='projectplatformsettings',
+        #    name='search_filters',
+        #),
+        #migrations.AddField(
+        #    model_name='projectsearchfilter',
+        #    name='project_settings',
+        #    field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='projects.ProjectPlatformSettings'),
+        #),
     ]
