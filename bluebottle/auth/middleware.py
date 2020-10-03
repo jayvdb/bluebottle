@@ -12,6 +12,7 @@ from django.core.urlresolvers import reverse
 from django.http.request import RawPostDataException
 from django.shortcuts import render_to_response
 from django.utils import timezone
+from django.utils.deprecation import MiddlewareMixin
 from lockdown import settings as lockdown_settings
 from lockdown.middleware import (LockdownMiddleware as BaseLockdownMiddleware,
                                  compile_url_exceptions, get_lockdown_form)
@@ -33,7 +34,7 @@ def isAdminRequest(request):
     return request.path.startswith('/downloads') or base_path in ['jet', 'admin']
 
 
-class UserJwtTokenMiddleware(object):
+class UserJwtTokenMiddleware(MiddlewareMixin):
     """
     Custom middleware to set the User on the request when using
     Jwt Token authentication.
@@ -65,7 +66,7 @@ class UserJwtTokenMiddleware(object):
             return
 
 
-class SlidingJwtTokenMiddleware(object):
+class SlidingJwtTokenMiddleware(MiddlewareMixin):
     """
     Custom middleware to set a sliding window for the jwt auth token expiration.
     """
@@ -178,7 +179,7 @@ class AdminOnlyAuthenticationMiddleware(AuthenticationMiddleware):
             super(AdminOnlyAuthenticationMiddleware, self).process_request(request)
 
 
-class AdminOnlyCsrf(object):
+class AdminOnlyCsrf(MiddlewareMixin):
     """
     Disable csrf for non-Admin requests, eg API
     """
@@ -281,7 +282,7 @@ class LockdownMiddleware(BaseLockdownMiddleware):
 authorization_logger = logging.getLogger(__name__)
 
 
-class LogAuthFailureMiddleWare(object):
+class LogAuthFailureMiddleWare(MiddlewareMixin):
     def process_request(self, request):
         # TODO: Handle this more cleanly. The exception is raised when using IE11.
         #       Possibly related to the following issue:
