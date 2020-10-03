@@ -143,17 +143,16 @@ PAYOUT_SERVICE = {
 TEST_RUNNER = 'bluebottle.test.test_runner.MultiTenantRunner'
 NUM_SLOW_TESTS = 50
 
-DEBUG = False
-TEMPLATE_DEBUG = False
-logging.disable(logging.CRITICAL)
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 CELERY_ALWAYS_EAGER = True
 CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
 BROKER_BACKEND = 'memory'
 
-PASSWORD_HASHERS = (
-    'django.contrib.auth.hashers.MD5PasswordHasher',
-)
+#PASSWORD_HASHERS = (
+#    'django.contrib.auth.hashers.MD5PasswordHasher',
+#)
 
 # Optional local override for test settings
 try:
