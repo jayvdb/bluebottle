@@ -91,6 +91,8 @@ class InitiativeDocument(DocType):
             Geolocation, Member, ProjectTheme, Event, Funding, Assignment
         )
 
+    Django = Meta
+
     def get_queryset(self):
         return super(InitiativeDocument, self).get_queryset().select_related(
             'theme', 'place', 'owner', 'promoter',
