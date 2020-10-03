@@ -29,7 +29,7 @@ class NewsItem(AnonymizationMixin, PublishableModel):
                             help_text=_("Shows at the top of your post."),
                             upload_to='blogs', blank=True)
     language = models.CharField(_("language"),
-                                max_length=5,
+                                max_length=7,
                                 choices=lazy(get_languages, tuple)())
     contents = PlaceholderField("blog_contents", plugins=[
         'TextPlugin',
