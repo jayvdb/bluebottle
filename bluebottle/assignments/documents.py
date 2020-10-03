@@ -18,6 +18,8 @@ class AssignmentDocument(ActivityDocument):
         model = Assignment
         related_models = (Initiative, Member, Applicant)
 
+    Django = Meta
+
     def get_instances_from_related(self, related_instance):
         if isinstance(related_instance, Initiative):
             return Assignment.objects.filter(initiative=related_instance)

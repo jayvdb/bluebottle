@@ -19,6 +19,8 @@ class EventDocument(ActivityDocument):
         model = Event
         related_models = (Initiative, Member, Participant)
 
+    Django = Meta
+
     def get_instances_from_related(self, related_instance):
         if isinstance(related_instance, Initiative):
             return Event.objects.filter(initiative=related_instance)
