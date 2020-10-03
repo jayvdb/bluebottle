@@ -304,9 +304,6 @@ TENANT_APPS = (
     'bluebottle.common',
     'bluebottle.token_auth',
 
-    'bluebottle.bluebottle_dashboard',
-    'jet',
-    'jet.dashboard',
     'rest_framework',
 
     'admin_tools',
@@ -329,7 +326,12 @@ TENANT_APPS = (
     'rest_framework.authtoken',
     'django_elasticsearch_dsl',
 
+<<<<<<< HEAD
     'bluebottle.looker',
+=======
+    'bluebottle.fsm',
+    #'bluebottle.looker',
+>>>>>>> a2f9937e7... de-jet
     'bluebottle.exports',
 
     'bluebottle.members',
