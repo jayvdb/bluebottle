@@ -163,6 +163,7 @@ MIDDLEWARE_CLASSES = (
     'django_tools.middlewares.ThreadLocal.ThreadLocalMiddleware',
     'bluebottle.auth.middleware.SlidingJwtTokenMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'axes.middleware.AxesMiddleware',
     'bluebottle.auth.middleware.LogAuthFailureMiddleWare'
 )
 
@@ -219,7 +220,7 @@ PASSWORD_HASHERS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'axes.backends.AxesModelBackend',
+    'axes.backends.AxesBackend',
     'bluebottle.social.backends.NoStateFacebookOAuth2',
     'social.backends.facebook.FacebookAppOAuth2',
     'django.contrib.auth.backends.ModelBackend',
