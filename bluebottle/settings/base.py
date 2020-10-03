@@ -303,9 +303,9 @@ TENANT_APPS = (
     'bluebottle.common',
     'bluebottle.token_auth',
 
-    'bluebottle.bluebottle_dashboard',
-    'jet',
-    'jet.dashboard',
+    # 'bluebottle.bluebottle_dashboard',
+    #'jet',
+    #'jet.dashboard',
 
     'rest_framework',
 
@@ -329,7 +329,7 @@ TENANT_APPS = (
     'django_elasticsearch_dsl',
 
     'bluebottle.fsm',
-    'bluebottle.looker',
+    #'bluebottle.looker',
     'bluebottle.exports',
 
     'bluebottle.members',
