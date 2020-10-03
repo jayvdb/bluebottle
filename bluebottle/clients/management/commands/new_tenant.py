@@ -118,7 +118,7 @@ class Command(BaseCommand):
             call_command('loaddata', 'geo_data')
             call_command('loaddata', 'geo_data')
             call_command('loaddata', 'skills')
-            call_command('search_index', '--rebuild', '-f')
+            # call_command('search_index', '--rebuild', '-f')
             call_command('loadlinks', '-f', 'links.json')
             call_command('loadpages', '-f', 'pages.json')
 
