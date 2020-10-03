@@ -7,7 +7,10 @@ from django.db.models.query import QuerySet
 from django.contrib.contenttypes.models import ContentType
 from django.utils.timezone import now
 
-from django_subquery.expressions import Subquery, OuterRef
+try:
+    from django.db.models.expressions import Subquery, OuterRef
+except ImportError:
+    from django_subquery.expressions import Subquery, OuterRef
 
 from polymorphic.managers import PolymorphicManager
 from polymorphic.query import PolymorphicQuerySet
