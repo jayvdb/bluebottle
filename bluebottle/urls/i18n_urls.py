@@ -47,7 +47,7 @@ urlpatterns = [
 
     # account login/logout, password reset, and password change
     url(r'^accounts/',
-        include('django.contrib.auth.urls', namespace='accounts')),
+        include('django.contrib.auth.urls')),  # , namespace='accounts')
 
     url(r'^admin/summernote/', include('django_summernote.urls')),
     url(r'^admin', RedirectView.as_view(url=reverse_lazy('admin:index')), name='admin-slash'),
