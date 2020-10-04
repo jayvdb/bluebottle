@@ -166,9 +166,12 @@ MIDDLEWARE_CLASSES = (
     'django_tools.middlewares.ThreadLocal.ThreadLocalMiddleware',
     'bluebottle.auth.middleware.SlidingJwtTokenMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
-    'axes.middleware.AxesMiddleware',
     'bluebottle.auth.middleware.LogAuthFailureMiddleWare'
 )
+from axes import __version__ as axes_version
+if axes_version != '4.5.4':
+    MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('axes.middleware.AxesMiddleware',)
+
 MIDDLEWARE = MIDDLEWARE_CLASSES
 
 REST_FRAMEWORK = {
@@ -224,13 +227,17 @@ PASSWORD_HASHERS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'axes.backends.AxesBackend',
     'bluebottle.social.backends.NoStateFacebookOAuth2',
     'social.backends.facebook.FacebookAppOAuth2',
     #'django.contrib.auth.backends.AllowAllUsersModelBackend',
     'django.contrib.auth.backends.ModelBackend',
     'bluebottle.utils.backends.AnonymousAuthenticationBackend'
 )
+from axes import __version__ as axes_version
+if axes_version == '4.5.4':
+    AUTHENTICATION_BACKENDS = ('axes.backends.AxesModelBackend',) + AUTHENTICATION_BACKENDS
+else:
+    AUTHENTICATION_BACKENDS = ('axes.backends.AxesBackend',) + AUTHENTICATION_BACKENDS
 
 
 AUTH_PASSWORD_VALIDATORS = [
