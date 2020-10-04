@@ -146,6 +146,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware',
     'bluebottle.bluebottle_drf2.middleware.MethodOverrideMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'tenant_schemas.middleware.TenantMiddleware',
     'bluebottle.clients.middleware.MediaMiddleware',
     'tenant_extras.middleware.TenantLocaleMiddleware',
@@ -226,6 +227,7 @@ AUTHENTICATION_BACKENDS = (
     'axes.backends.AxesBackend',
     'bluebottle.social.backends.NoStateFacebookOAuth2',
     'social.backends.facebook.FacebookAppOAuth2',
+    #'django.contrib.auth.backends.AllowAllUsersModelBackend',
     'django.contrib.auth.backends.ModelBackend',
     'bluebottle.utils.backends.AnonymousAuthenticationBackend'
 )
