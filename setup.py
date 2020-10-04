@@ -61,7 +61,6 @@ install_requires = [
     'django-subquery==1.0.4',
     'django-summernote==0.8.7.3',
     'django-taggit==0.22.1',
-    'django-tenant-schemas',
     'django-tinymce==2.7.0',
     'django-tools==0.33.0',
     'django-uuidfield==0.5.0',
@@ -116,6 +115,7 @@ install_requires = [
 
     # Github requirements
     'django-exportdb @ git+https://github.com/onepercentclub/django-exportdb.git@0.4.8#egg=django-exportdb-0.4.8-github',
+    'django-tenant-schemas @ git+https://github.com/jayvdb/django-tenant-schemas.git@migrate-fix#egg=django-tenant-schemas-1.10.0',
     'django-tenant-extras @ git+https://github.com/onepercentclub/django-tenant-extras.git@2.0.14#egg=django-tenant-extras-2.0.14',
     'django-taggit-autocomplete-modified @ git+https://github.com/onepercentclub/django-taggit-autocomplete-modified.git@8e7fbc2deae2f1fbb31b574bc8819d9ae7c644d6#egg=django-taggit-autocomplete-modified-0.1.1b1',
 ]
