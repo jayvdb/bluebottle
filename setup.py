@@ -48,7 +48,7 @@ install_requires = [
     'django-map-widgets==0.2.2',
     'django-memoize==2.1.0',
     'django-modeltranslation==0.12.1',
-    'django-money==0.15.1',
+    'django-money',
     'django-nested-inline',
     'django-parler<2.2',
     'django-permissions-widget==1.5.1',
