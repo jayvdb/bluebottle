@@ -49,7 +49,7 @@ install_requires = [
     'django-memoize==2.1.0',
     'django-modeltranslation==0.12.1',
     'django-money==0.15.1',
-    'django-parler==1.9.2',
+    'django-parler<2.2',
     'django-permissions-widget==1.5.1',
     'django_polymorphic==1.2',
     'django-recaptcha==2.0.6',
