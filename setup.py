@@ -42,7 +42,7 @@ install_requires = [
     'django-hashers-passlib==0.3',
     'django-ipware==2.1.0',
     'django-jet==1.0.7',
-    'django-localflavor==1.5.2',
+    'django-localflavor==2.2',
     'django-lockdown==1.4.2',
     'django-loginas==0.3.2',
     'django-map-widgets==0.2.2',
