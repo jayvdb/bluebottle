@@ -37,7 +37,6 @@ install_requires = [
     'django-extensions==1.7.9',
     'django-filter',
     'django-geoposition==0.3.0',
-    'django-fluent-contents',
     'django-fluent-dashboard==1.0a1',
     'django-fsm==2.5.0',
     'django-hashers-passlib==0.3',
@@ -116,8 +115,9 @@ install_requires = [
     # Github requirements
     'django-exportdb @ git+https://github.com/onepercentclub/django-exportdb.git@0.4.8#egg=django-exportdb-0.4.8-github',
     'django-tenant-schemas @ git+https://github.com/jayvdb/django-tenant-schemas.git@migrate-fix#egg=django-tenant-schemas-1.10.0',
-    'django-tenant-extras @ git+https://github.com/onepercentclub/django-tenant-extras.git@2.0.14#egg=django-tenant-extras-2.0.14',
+    'django-tenant-extras @ git+https://github.com/jayvdb/django-tenant-extras.git@dj3-template-loader#egg=django-tenant-extras-2.0.14',
     'django-taggit-autocomplete-modified @ git+https://github.com/onepercentclub/django-taggit-autocomplete-modified.git@8e7fbc2deae2f1fbb31b574bc8819d9ae7c644d6#egg=django-taggit-autocomplete-modified-0.1.1b1',
+    'django-fluent-contents @ git+https://github.com/jayvdb/django-fluent-contents.git@issue-106#egg=django-fluent-contents-2.0.7',
 ]
 
 tests_requires = [
