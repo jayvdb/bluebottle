@@ -22,6 +22,13 @@ from rest_framework_json_api.renderers import JSONRenderer
 from rest_framework_json_api import utils
 
 
+def _format_object(obj, format_type=None):
+    try:
+        return utils.format_keys(obj, format_type)
+    except AttributeError:
+        return utils.format_field_names(obj, format_type)
+
+
 class BluebottleJSONAPIRenderer(JSONRenderer):
     def get_indent(self, *args, **kwargs):
         return 4
@@ -127,10 +134,10 @@ class BluebottleJSONAPIRenderer(JSONRenderer):
                         # NEW: Add meta to included resource
                         meta = cls.extract_meta(serializer.__class__, serializer_resource)
                         if meta:
-                            new_item.update({'meta': utils._format_object(meta)})
+                            new_item.update({'meta': _format_object(meta)})
 
                         included_cache[new_item['type']][new_item['id']] = \
-                            utils._format_object(new_item)
+                            _format_object(new_item)
                         cls.extract_included(
                             serializer_fields,
                             serializer_resource,
@@ -154,9 +161,9 @@ class BluebottleJSONAPIRenderer(JSONRenderer):
                 # NEW: Add meta to included resource
                 meta = cls.extract_meta(serializer_class, serializer_data)
                 if meta:
-                    new_item.update({'meta': utils._format_object(meta)})
+                    new_item.update({'meta': _format_object(meta)})
 
-                included_cache[new_item['type']][new_item['id']] = utils._format_object(
+                included_cache[new_item['type']][new_item['id']] = _format_object(
                     new_item
                 )
                 cls.extract_included(
@@ -386,4 +393,4 @@ class BluebottleJSONAPIRenderer(JSONRenderer):
                 })
                 continue
 
-        return utils._format_object(data)
+        return _format_object(data)
