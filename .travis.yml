@@ -39,4 +39,4 @@ install:
   - pip install -e .[test] --trusted-host github.com
 script:
   - mkdir tenants
-  - python -m coverage run --parallel-mode --source=bluebottle manage.py test --keepdb
+  - python -m coverage run --parallel-mode --source=bluebottle manage.py test -v2 --keepdb

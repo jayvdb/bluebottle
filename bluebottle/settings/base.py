@@ -526,7 +526,7 @@ LOGGING = {
         'bluebottle': {
             'handlers': ['console'],
             'propagate': True,
-            'level': 'DEBUG',
+            'level': 'INFO',
         },
         'payments.payment': {
             'handlers': ['mail_admins'],
