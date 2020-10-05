@@ -128,7 +128,7 @@ tests_requires = [
     'django-setuptest',
     'django-slowtests',
     'django-webtest',
-    'factory-boy',
+    'factory-boy<3',
     'httmock',
     'mock==4.0.2' if sys.version_info.major == 3 else 'mock==3.0.5',
     'nose',
