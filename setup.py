@@ -127,7 +127,7 @@ tests_requires = [
     'django-setuptest',
     'django-slowtests',
     'django-webtest',
-    'factory-boy',
+    'factory-boy<3',
     'httmock',
     'mock',
     'nose',
