@@ -20,7 +20,7 @@ install_requires = [
     'beautifulsoup4',
     'bleach',
     'clamd',
-    'celery',
+    'celery<5',
     'dotted',
     'defusedxml',
     'django-admin-sortable',
