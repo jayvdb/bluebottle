@@ -79,7 +79,7 @@ install_requires = [
     'micawber==0.3.4',
     'mixpanel==4.3.2',
     'munch==2.5.0',
-    'django-multiselectfield==0.1.8',
+    'django-multiselectfield',
     'openpyxl==2.4.8',
     'pendulum==1.2.4',
     'psycopg2-binary==2.8.6',
