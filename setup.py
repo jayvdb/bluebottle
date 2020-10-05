@@ -19,7 +19,7 @@ install_requires = [
     'Pillow',
     'beautifulsoup4',
     'bleach',
-    'celery',
+    'celery<5',
     'dotted',
     'defusedxml',
     'django-admin-sortable',
