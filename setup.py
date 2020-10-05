@@ -14,6 +14,7 @@ readme = read_file('README.rst')
 changes = ''
 
 install_requires = [
+    'anyjson',  # needed by djcelery
     'Babel',
     'Django',
     'Pillow',
