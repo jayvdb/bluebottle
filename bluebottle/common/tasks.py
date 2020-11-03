@@ -6,7 +6,7 @@ import json
 import logging
 import requests
 
-from urlparse import urljoin
+from urllib.parse import urljoin
 from celery import shared_task
 from sorl.thumbnail.shortcuts import get_thumbnail
 
