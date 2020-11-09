@@ -15,6 +15,7 @@ class Migration(migrations.Migration):
         ('rewards', '0010_auto_20201103_1028'),
         ('suggestions', '0005_auto_20201103_1028'),
         ('fundraisers', '0008_auto_20201103_1028'),
+        ('tasks', '0042_migrate_tasks_to_activities'),
         ('projects', '0094_merge_20191107_0943'),
     ]
 
