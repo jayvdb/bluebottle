@@ -46,9 +46,4 @@ class Migration(migrations.Migration):
             name='title',
             field=models.CharField(max_length=255, verbose_name='Title'),
         ),
-        migrations.AlterField(
-            model_name='contribution',
-            name='status',
-            field=models.CharField(max_length=40),
-        ),
     ]
