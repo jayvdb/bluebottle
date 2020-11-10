@@ -235,7 +235,6 @@ class Migration(migrations.Migration):
         ('pages', '0005_auto_20170803_1729'),
         ('projects', '0094_merge_20191107_0943'),
         ('tasks', '0041_remove_untranslated_fields'),
-        ('wallposts', '0021_auto_20201103_1028'),
     ]
 
     operations = [
