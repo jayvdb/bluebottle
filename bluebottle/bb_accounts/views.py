@@ -17,10 +17,7 @@ from rest_framework import status, views, response, generics
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.exceptions import PermissionDenied, NotAuthenticated, ValidationError
 
-try:
-    from rest_framework_jwt.views import ObtainJSONWebToken
-except ImportError:
-    from rest_framework_jwt.views import ObtainJSONWebTokenView as ObtainJSONWebToken
+from rest_framework_jwt.views import ObtainJSONWebToken
 
 from rest_framework_json_api.views import AutoPrefetchMixin
 
