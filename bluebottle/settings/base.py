@@ -5,8 +5,6 @@ from collections import OrderedDict
 from .admin_dashboard import *  # noqa
 from django.utils.translation import ugettext_lazy as _
 
-from axes import __version__ as axes_version
-
 import rules
 from PIL import ImageFile
 
@@ -167,10 +165,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.FetchFromCacheMiddleware',
     'bluebottle.auth.middleware.LogAuthFailureMiddleWare'
 )
-if axes_version != '4.5.4':
-    MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('axes.middleware.AxesMiddleware',)
-
-MIDDLEWARE = MIDDLEWARE_CLASSES
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
@@ -224,13 +218,8 @@ PASSWORD_HASHERS = (
     'hashers_passlib.phpass',
 )
 
-if axes_version == '4.5.4':
-    AXES_AUTHENTICATION_BACKEND = 'axes.backends.AxesModelBackend'
-else:
-    AXES_AUTHENTICATION_BACKEND = 'axes.backends.AxesBackend'
-
 AUTHENTICATION_BACKENDS = (
-    AXES_AUTHENTICATION_BACKEND,
+    'axes.backends.AxesModelBackend',
     'bluebottle.social.backends.NoStateFacebookOAuth2',
     'social.backends.facebook.FacebookAppOAuth2',
     'django.contrib.auth.backends.ModelBackend',
