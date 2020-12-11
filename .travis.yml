@@ -1,8 +1,8 @@
-dist: xenial
+dist: focal
 sudo: false
 language: python
 addons:
-  postgresql: "10"
+  postgresql: "13"
   apt:
     packages:
       - libxmlsec1
@@ -10,12 +10,12 @@ addons:
       - libgdal-dev
       - swig
       - openjdk-8-jdk-headless
-      - postgresql-client-10
+      - postgresql-client-13
 cache: pip
   - "$HOME/.cache/pip/"
   - "$HOME/virtualenv/python2.7.15/lib/python2.7/site-packages"
 python:
-  - 3.7
+  - 3.8
 services:
   - elasticsearch
   - postgresql
