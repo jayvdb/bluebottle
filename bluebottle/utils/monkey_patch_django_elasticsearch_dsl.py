@@ -2,8 +2,13 @@ from django.db import connection
 
 import elasticsearch_dsl.document
 
+try:
+    DocTypeOptions = elasticsearch_dsl.document.DocTypeOptions
+except AttributeError:
+    DocTypeOptions = object
 
-class TenantAwareDocTypeOptions(elasticsearch_dsl.document.DocTypeOptions):
+
+class TenantAwareDocTypeOptions(DocTypeOptions):
     @property
     def index(self):
         if self._index:
