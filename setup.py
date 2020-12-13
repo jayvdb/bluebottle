@@ -69,7 +69,7 @@ install_requires = [
     'django-tools',
     'django-uuidfield',
     'django-wysiwyg',
-    'djangorestframework-jsonapi',
+    'djangorestframework-jsonapi==2.8.0',
     'drf-jwt',
     'djangorestframework',
     'dkimpy',
