@@ -28,7 +28,7 @@ install_requires = [
     'django-admin-tools',
     'django-adminfilters',
     'django-appconf',
-    'django-axes',
+    'django-axes==4.5.4',
     'django-choices',
     'django-cors-headers',
     'django-daterange-filter',
