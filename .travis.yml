@@ -1,16 +1,32 @@
-dist: focal
 sudo: false
 language: python
-addons:
-  postgresql: "13"
-  apt:
-    packages:
-      - libxmlsec1
-      - libxmlsec1-dev
-      - libgdal-dev
-      - swig
-      - openjdk-8-jdk-headless
-      - postgresql-client-13
+matrix:
+  include:
+    - dist: xenial
+      env: DJANGO_VERSION=1.11
+      addons:
+        postgresql: 10
+        apt:
+          packages:
+            - postgresql-client-10
+            - libxmlsec1
+            - libxmlsec1-dev
+            - libgdal-dev
+            - swig
+            - openjdk-8-jdk-headless
+
+    - dist: focal
+      env: DJANGO_VERSION=3.1
+      addons:
+        postgresql: 13
+        apt:
+          packages:
+            - postgresql-client-13
+            - libxmlsec1
+            - libxmlsec1-dev
+            - libgdal-dev
+            - swig
+            - openjdk-8-jdk-headless
 cache: pip
   - "$HOME/.cache/pip/"
   - "$HOME/virtualenv/python2.7.15/lib/python2.7/site-packages"
@@ -22,9 +38,6 @@ services:
 env:
   global:
   - DJANGO_SETTINGS_MODULE='bluebottle.settings.testing'
-matrix:
-  - env: DJANGO_VERSION=1.11
-  - env: DJANGO_VERSION=3.1
 before_install:
   - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb && sudo dpkg -i --force-confnew elasticsearch-6.6.0.deb && sudo service elasticsearch restart
   - createdb test_bluebottle_test
