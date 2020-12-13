@@ -65,7 +65,7 @@ install_requires = [
     'django-subquery',
     'django-summernote',
     'django-taggit',
-    'django-tinymce',
+    'django-tinymce<3.1.0',
     'django-tools',
     'django-uuidfield',
     'django-wysiwyg',
