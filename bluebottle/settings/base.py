@@ -2,6 +2,8 @@ import datetime
 import os
 from collections import OrderedDict
 
+import bluebottle.utils.monkey_patch_geos_version  # noqa
+
 from .admin_dashboard import *  # noqa
 from django.utils.translation import ugettext_lazy as _
 
