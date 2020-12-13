@@ -40,7 +40,7 @@ install_requires = [
     'django-daterange-filter',
     'django-dynamic-fixture',
     'django-elasticsearch-dsl',
-    'django-extensions',
+    'django-extensions<3',
     'django-filter',
     'django-fluent-dashboard',
     'django-fsm',
