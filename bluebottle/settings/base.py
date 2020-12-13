@@ -169,6 +169,8 @@ MIDDLEWARE_CLASSES = (
     'bluebottle.auth.middleware.LogAuthFailureMiddleWare'
 )
 
+MIDDLEWARE = MIDDLEWARE_CLASSES
+
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
     'DEFAULT_AUTHENTICATION_CLASSES': (
