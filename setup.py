@@ -13,10 +13,16 @@ def read_file(name):
 readme = read_file('README.rst')
 changes = ''
 
+DJANGO_VERSION = os.getenv('DJANGO_VERSION')
+if DJANGO_VERSION:
+    DJANGO_REQ = 'Django~={}.0'.format(DJANGO_VERSION)
+else:
+    DJANGO_REQ = 'Django'
+
 install_requires = [
     'anyjson',  # needed by djcelery
     'Babel',
-    'Django',
+    DJANGO_REQ,
     'Pillow',
     'beautifulsoup4',
     'bleach',
