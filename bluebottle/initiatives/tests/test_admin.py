@@ -42,8 +42,8 @@ class TestInitiativeAdmin(BluebottleAdminTestCase):
         self.assertContains(response, 'View on site')
         self.assertContains(response, 'Activities')
         self.assertContains(response, 'Messages')
-        self.assertContains(response, 'Office location')
         self.assertContains(response, 'Impact location')
+        self.assertContains(response, 'Office location')
 
     def test_initiative_admin_with_organization_contact(self):
         self.initiative.contact = OrganizationFactory.create()
