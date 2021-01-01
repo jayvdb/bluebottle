@@ -326,12 +326,6 @@ TENANT_APPS = (
     'rest_framework.authtoken',
     'django_elasticsearch_dsl',
 
-<<<<<<< HEAD
-    'bluebottle.looker',
-=======
-    'bluebottle.fsm',
-    #'bluebottle.looker',
->>>>>>> a2f9937e7... de-jet
     'bluebottle.exports',
 
     'bluebottle.members',
